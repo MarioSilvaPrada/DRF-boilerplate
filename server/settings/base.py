@@ -35,9 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     # 3rd party apps
-    'colorfield',
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # local
+    'users'
 ]
 
 SITE_ID = 1  # allauth

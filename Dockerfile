@@ -17,4 +17,4 @@ RUN pip install -r /requirements.txt
 RUN apk del .tmp-build-deps
 
 # Copy project
-COPY ./app /app
+COPY . /app
