@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # local
-    'users'
+    'users',
 ]
 
 SITE_ID = 1  # allauth
