@@ -103,6 +103,8 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {}
+REST_USE_JWT = True
+JWT_AUTH_COOKIE = 'my-app-auth'
 
 
 # Database
@@ -164,8 +166,8 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_IMPORTS = ['server.tasks']
-# CELERY_TIMEZONE='UTC'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+# CELERY_TIMEZONE='UTC'
 
 # CELERY_BEAT_SCHEDULE = {
 #     'hello': {
