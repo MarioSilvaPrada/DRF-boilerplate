@@ -112,8 +112,12 @@ JWT_AUTH_COOKIE = 'my-app-auth'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": os.environ.get("SQL_ENGINE", default="django.db.backends.sqlite3"),
+        "NAME": os.environ.get("SQL_DATABASE"),
+        "USER": os.environ.get("SQL_USER", default="user"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", default="password"),
+        "HOST": os.environ.get("SQL_HOST", default="localhost"),
+        "PORT": os.environ.get("SQL_PORT", default="5432"),
     }
 }
 
